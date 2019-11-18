@@ -32,28 +32,24 @@ $(document).ready(function() {
       choiceButton.text(questions[currentQindex].choices[i]);//this needs to show text
       choicesContainer.append(choiceButton);
       choiceButton.on("click", function(event) {
-        var choiceText = (event.target.innerHTML);
-        if (choiceText === questions[currentQindex].answer)
-        {
-          score++; 
-          getQuestion();
-        }
-        scoreContainer.append(score);
-        currentQindex++;
-        getQuestion();
-
+      var choiceText = (event.target.innerHTML);
+      if (choiceText === questions[currentQindex].answer)
+      {
+        score++; 
+      }
+      currentQindex++;
+      $("#choicesContainer").empty();
+      $("#score").empty();
+      scoreContainer.append(score);
+      getQuestion();
       })
   }
 }
 
-  
 startButton.on("click", function() {
   getQuestion(0);
   startButton.remove(); 
 })
-
-
-//create separate functions for correct and incorrect, and have the Q index go up in both
 
 
 
