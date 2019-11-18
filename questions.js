@@ -22,6 +22,8 @@ $(document).ready(function() {
   var currentQindex = 0;
   var currentCindex = 0;
   var score = 0;
+  var time = 1 * questions.length;
+  var interval;
   
   function getQuestion() { 
     for (var i = 0; i < questions[currentQindex].choices.length; i++) { 
@@ -49,8 +51,19 @@ $(document).ready(function() {
 startButton.on("click", function() {
   getQuestion(0);
   startButton.remove(); 
+  interval = setInterval(quizTimer, 1000)
 })
 
+function quizTimer() {
+  $("#timer").text("Timer: " + time);
+  if (time > 0) {
+      time--;
+  }
+  else {
+      clearInterval(time);
+      $("#timer").append(" *Time's Up!*");
+  }
+}
 
 
 
