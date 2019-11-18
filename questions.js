@@ -30,16 +30,19 @@ $(document).ready(function() {
       // choicesContainer.append("<button>" + questions[j].choices[i] + "</button>"); (Another way to do it)
       var choiceButton = $("<button>");
       choiceButton.text(questions[currentQindex].choices[i]);//this needs to show text
+      choicesContainer.append(choiceButton);
       choiceButton.on("click", function(event) {
         var choiceText = (event.target.innerHTML);
         if (choiceText === questions[currentQindex].answer)
         {
           score++; 
-          scoreContainer.append(score);
-          currentQindex++;
+          getQuestion();
         }
+        scoreContainer.append(score);
+        currentQindex++;
+        getQuestion();
+
       })
-      choicesContainer.append(choiceButton);
   }
 }
 
