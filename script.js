@@ -50,17 +50,8 @@ $(document).ready(function() {
         $("#timer").append(" *Time's Up!*");
     }
   }
+ 
+});
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-     
-  });
-  
+
   

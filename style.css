@@ -1,0 +1,46 @@
+body{
+    width: 100%;
+    background: lightblue;
+}
+
+h1 {
+    text-align: center;
+    font-family: cursive;
+}
+
+#start {
+    position: relative;
+    margin-left: 50%;
+    font-family: cursive;
+    padding: 30px;
+}
+
+#scoreName {
+    position: fixed;
+    bottom: 95%;
+    font-family: cursive;
+}
+
+#score {
+    position: absolute;
+    right: 95%;
+    bottom: 95%;
+    font-family: cursive;
+}
+
+#choicesContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+#title {
+    text-align: center;
+    font-family: cursive;
+}
+
+#timer {
+    position: fixed;
+    right: 0%;
+    bottom: 95%;
+    font-family: cursive;
+}
