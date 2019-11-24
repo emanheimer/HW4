@@ -6,12 +6,14 @@ body{
 h1 {
     text-align: center;
     font-family: cursive;
+    font-size: 40px;
 }
 
 #start {
     position: relative;
-    margin-left: 50%;
+    margin-left: 45%;
     font-family: cursive;
+    font-size: 20px;
     padding: 30px;
 }
 
@@ -19,6 +21,7 @@ h1 {
     position: fixed;
     bottom: 95%;
     font-family: cursive;
+    font-size: 20px;
 }
 
 #score {
@@ -26,6 +29,7 @@ h1 {
     right: 95%;
     bottom: 95%;
     font-family: cursive;
+    font-size: 20px;
 }
 
 #choicesContainer {
@@ -36,6 +40,7 @@ h1 {
 #title {
     text-align: center;
     font-family: cursive;
+    font-size: 30px;
 }
 
 #timer {
@@ -43,4 +48,5 @@ h1 {
     right: 0%;
     bottom: 95%;
     font-family: cursive;
+    font-size: 20px;
 }

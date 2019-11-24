@@ -2,10 +2,11 @@ $(document).ready(function() {
 
     var startButton = $("#start");
     var scoreContainer = $("#score");
+    var titleContainer = $("#title");
     var currentQindex = 0;
     var currentCindex = 0;
     var score = 0;
-    var time = 15 * questions.length;
+    var time = 10 * questions.length;
     var interval;
     
     function getQuestion() { 
@@ -30,16 +31,17 @@ $(document).ready(function() {
         $("#score").empty();
         scoreContainer.append(score);
         getQuestion();
-        })
-    }
-  }
-  
+      })
+     }
+   }
+
   startButton.on("click", function() {
     getQuestion(0);
     startButton.remove(); 
     interval = setInterval(quizTimer, 1000)
   })
-  
+
+
   function quizTimer() {
     $("#timer").text("Timer: " + time);
     if (time > 0) {
@@ -47,7 +49,9 @@ $(document).ready(function() {
     }
     else {
         clearInterval(time);
-        $("#timer").append(" *Time's Up!*");
+        $("#timer").empty(); 
+        choicesContainer.remove(); 
+        titleContainer.remove(); 
     }
   }
  
