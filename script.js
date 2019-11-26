@@ -7,11 +7,17 @@ $(document).ready(function() {
     var currentCindex = 0;
     var score = 0;
     var time = 10 * questions.length;
-    var interval;
+    var intervalID; //indentifyer for interval that's running
     
     function getQuestion() { 
+      //stops quiz
+      if (currentQindex === questions.length) { 
+          endQuiz(); 
+          return;
+      }
+      
       for (var i = 0; i < questions[currentQindex].choices.length; i++) { 
-        $("#title").text(questions[currentQindex].title);
+        titleContainer.text(questions[currentQindex].title);
         var choicesContainer=$("#choicesContainer"); 
         // choicesContainer.append("<button>" + questions[j].choices[i] + "</button>"); (Another way to do it)
         var choiceButton = $("<button>");
@@ -38,17 +44,23 @@ $(document).ready(function() {
   startButton.on("click", function() {
     getQuestion(0);
     startButton.remove(); 
-    interval = setInterval(quizTimer, 1000)
+    intervalID = setInterval(quizTimer, 1000)
   })
 
-
+  function endQuiz() {
+    clearInterval(intervalID);
+    titleContainer.remove(); 
+    
+  }
+  
+  
   function quizTimer() {
     $("#timer").text("Timer: " + time);
     if (time > 0) {
         time--;
     }
     else {
-        clearInterval(time);
+        clearInterval(intervalID);
         $("#timer").empty(); 
         choicesContainer.remove(); 
         titleContainer.remove(); 
