@@ -1,18 +1,23 @@
 body{
     width: 100%;
-    background: lightblue;
+    background: #e6ffe6;
+    font-family: "Sofia";
+}
+
+button {
+    padding: 20px;
+    margin: 20px;
+    font-family: "Sofia"
 }
 
 h1 {
     text-align: center;
-    font-family: cursive;
     font-size: 40px;
 }
 
 #start {
     position: relative;
     margin-left: 45%;
-    font-family: cursive;
     font-size: 20px;
     padding: 30px;
 }
@@ -20,7 +25,6 @@ h1 {
 #scoreName {
     position: fixed;
     bottom: 95%;
-    font-family: cursive;
     font-size: 20px;
 }
 
@@ -28,18 +32,17 @@ h1 {
     position: absolute;
     right: 95%;
     bottom: 95%;
-    font-family: cursive;
     font-size: 20px;
 }
 
 #choicesContainer {
     text-align: center;
     padding: 20px;
+    margin: 20px;
 }
 
 #title {
     text-align: center;
-    font-family: cursive;
     font-size: 30px;
 }
 
@@ -47,6 +50,5 @@ h1 {
     position: fixed;
     right: 0%;
     bottom: 95%;
-    font-family: cursive;
     font-size: 20px;
 }
