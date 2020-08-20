@@ -1,0 +1,56 @@
+body{
+    width: 100%;
+    background: #e6ffe6;
+    font-family: "Sofia";
+}
+
+button {
+    padding: 20px;
+    margin: 20px;
+    font-family: "Sofia"
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#start {
+    position: relative;
+    margin-left: 45%;
+    font-size: 20px;
+    padding: 30px;
+}
+
+#scoreName {
+    position: fixed;
+    bottom: 95%;
+    font-size: 20px;
+}
+
+#score {
+    position: absolute;
+    right: 95%;
+    bottom: 95%;
+    font-size: 20px;
+}
+
+#choicesContainer {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+#title {
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid grey;
+    padding: 30px;
+}
+
+#timer {
+    position: fixed;
+    right: 0%;
+    bottom: 95%;
+    font-size: 20px;
+}
