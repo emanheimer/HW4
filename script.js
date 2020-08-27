@@ -1,8 +1,8 @@
 $(document).ready(function() {
-
   var startButton = $("#start");
   var scoreContainer = $("#score");
   var titleContainer = $("#title");
+  titleContainer.css("display", "none"); 
   var choicesContainer=$("#choicesContainer"); 
   var currentQindex = 0;
   var score = 0;
@@ -10,6 +10,7 @@ $(document).ready(function() {
   var intervalID; //indentifyer for interval that's running
     
   function getQuestion() { 
+    titleContainer.css("display", "block"); 
     //stops quiz
     if (currentQindex === questions.length) { 
       endQuiz(); 
@@ -27,12 +28,10 @@ $(document).ready(function() {
       if (choiceText === questions[currentQindex].answer)
       {
         score++; 
-        choicesContainer.css("background-color", "green");
       }
       else 
       {
-        time = time-5;  
-        choicesContainer.css("background-color", "red");
+        time = time-5;
       }
       currentQindex++;
       $("#choicesContainer").empty();
@@ -42,7 +41,8 @@ $(document).ready(function() {
     })
   }
  }
-startButton.on("click", function() {
+
+ startButton.on("click", function() {
   getQuestion(0);
   startButton.remove(); 
   intervalID = setInterval(quizTimer, 1000)
@@ -73,10 +73,7 @@ function quizTimer()
     clearInterval(intervalID);
     $("#timer").empty(); 
     choicesContainer.remove(); 
-    titleContainer.remove(); 
+    titleContainer.remove();
   }
  }
 });
-  
-
-  
